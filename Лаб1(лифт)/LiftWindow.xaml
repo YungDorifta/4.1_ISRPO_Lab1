@@ -1,0 +1,40 @@
+﻿<Window x:Class="Лаб1_лифт_.LiftWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Лаб1_лифт_"
+        mc:Ignorable="d"
+        Title="LiftWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" x:Name="Oneggg">
+        </StackPanel>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0" Margin="5" Click="Open">Open</Button>
+            <Button Grid.Column="1" Margin="5" Click="Close">Close</Button>
+        </Grid>
+        
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="0" x:Name="Status" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5">Status</Label>
+            <Button Grid.Column="1" Click="ShowStatusClick" Margin="5">Show status</Button>
+
+        </Grid>
+    </Grid>
+</Window>

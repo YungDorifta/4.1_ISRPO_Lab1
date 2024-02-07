@@ -1,0 +1,68 @@
+﻿<Window x:Class="Лаб1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Лаб1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="493" Width="800">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel>
+                <Label Margin="10,0,0,0">Add money:</Label>
+                <TextBox x:Name="MoneyBox" Width="100" HorizontalAlignment="Left" Margin="10,5,0,0" KeyUp="TextBox_KeyDown"></TextBox>
+                <Button Width="100" HorizontalAlignment="Left" Margin="10,5,0,5" Click="Button_Click">Add</Button>
+
+                <GroupBox x:Name="CoffeeType">
+                    <StackPanel>
+                        <Label>CoffeeType</Label>
+                        <RadioButton x:Name="Espresso" Content="Espresso" IsChecked="True" Checked="RadioButton_Checked"/>
+                        <RadioButton x:Name="HouseBlend" Content="HouseBlend" Checked="RadioButton_Checked"/>
+                        <RadioButton x:Name="DarkRoast" Content="DarkRoast" Checked="RadioButton_Checked"/>
+                        <RadioButton x:Name="Decaf" Content="Decaf" Checked="RadioButton_Checked"/>
+                    </StackPanel>
+                </GroupBox>
+
+                <GroupBox x:Name="Addings">
+                    <StackPanel Margin="10">
+                        <Label>Addings</Label>
+                        <CheckBox x:Name="Milk" Unchecked="Milk_Checked" Checked="Milk_Checked">
+                            <Label Margin="0,-5,0,0">Milk</Label>
+                        </CheckBox>
+                        <CheckBox x:Name="Whip" Unchecked="Milk_Checked" Checked="Milk_Checked">
+                            <Label Margin="0,-5,0,0">Whip</Label>
+                        </CheckBox>
+                        <CheckBox x:Name="Mocha" Unchecked="Milk_Checked" Checked="Milk_Checked">
+                            <Label Margin="0,-5,0,0">Mocha</Label>
+                        </CheckBox>
+                        <CheckBox x:Name="Soy" Unchecked="Milk_Checked" Checked="Milk_Checked">
+                            <Label Margin="0,-5,0,0">Soy</Label>
+                        </CheckBox>
+                    </StackPanel>
+                </GroupBox>
+            </StackPanel>
+
+            <Button Grid.Row="1" Margin="10,10" Click="SubmitCoffee">ОК</Button>
+        </Grid>
+
+        <Label x:Name="cost" Grid.Column="1">Cost:</Label>
+        <Label x:Name="money" Grid.Column="1" Margin="0,20,0,0">Money:</Label>
+        <Label x:Name="re_turn" Grid.Column="1" Margin="0,40,0,0">Return: </Label>
+        <Image Grid.Column="1" Margin="10,70,110,10" Source="E:\College\4th_course\images\Espresso.jpg" Stretch="Fill" x:Name="CoffeeImage"/>
+        <Image Grid.Column="1" HorizontalAlignment="Right" Width="90" Height="80" Margin="0,70,10,0" VerticalAlignment="Top" Source="E:\College\4th_course\images\Whip.jpg" Stretch="Fill" x:Name="WhipImage" Visibility="Hidden"/>
+        <Image Grid.Column="1" HorizontalAlignment="Right" Width="90" Height="90" Margin="0,160,10,0" VerticalAlignment="Top" Source="E:\College\4th_course\images\Milk.jpg" Stretch="Fill" x:Name="MilkImage" Visibility="Hidden"/>
+        <Image Grid.Column="1" HorizontalAlignment="Right" Width="90" Height="90" Margin="0,260,10,0" VerticalAlignment="Top" Source="E:\College\4th_course\images\Soy.jpg" Stretch="Fill" x:Name="SoyImage" Visibility="Hidden"/>
+        <Image Grid.Column="1" HorizontalAlignment="Right" Width="90" Height="90" Margin="0,360,10,0" VerticalAlignment="Top" Source="E:\College\4th_course\images\Mocha.jpg" Stretch="Fill" x:Name="MochaImage" Visibility="Hidden"/>
+    </Grid>
+</Window>
